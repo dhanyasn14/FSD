@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback Page with Web Storage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    article, aside {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    form input[type="text"],
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    form input[type="submit"] {
+      margin-top: 15px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<main>
+
+  <article>
+    <h2>Feedback Form</h2>
+    <form action="#" method="post">
+      <label for="username">Your Name:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="feedback">Your Feedback:</label>
+      <textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+      <input type="submit" value="Submit Feedback">
+    </form>
+  </article>
+
+  <aside>
+    <h2>About Web Storage</h2>
+    <p>
+      <strong>localStorage</strong> and <strong>sessionStorage</strong> are part of the Web Storage API used to store data in the browser.
+    </p>
+    <ul>
+      <li><strong>localStorage</strong>: Stores data with no expiration time. Data persists even after the browser is closed and reopened.</li>
+      <li><strong>sessionStorage</strong>: Stores data for a single session. Data is cleared when the page session ends (usually when the tab or browser is closed).</li>
+    </ul>
+    <p>
+      These storage mechanisms are often used in web applications to store user preferences, form data, or temporary state without needing a server.
+    </p>
+  </aside>
+
+</main>
+
+</body>
+</html>

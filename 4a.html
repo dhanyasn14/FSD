@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    section {
+      max-width: 500px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="range"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    output {
+      display: inline-block;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" />
+
+      <label for="satisfaction">Satisfaction Level: <output id="level">5</output></label>
+      <input
+        type="range"
+        id="satisfaction"
+        name="satisfaction"
+        min="1"
+        max="10"
+        value="5"
+        oninput="level.value = this.value"
+      />
+
+      <input type="submit" value="Submit" />
+
+    </form>
+  </section>
+
+</body>
+</html>
